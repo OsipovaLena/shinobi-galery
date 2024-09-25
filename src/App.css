@@ -1,0 +1,39 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.shinobi-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: purple solid;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: plum;
+
+}
+
+.shinobi-name {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.shinobi-container {
+
+
+
+}
+
+.shinobi-container img {
+    width: 650px;
+
+}
+
+button {
+    text-decoration: none;
+}
