@@ -23,20 +23,16 @@ function App() {
 
     return (
         <div className="main-container">
-            <div className="shinobi-container">
 
+            <div className="shinobi-container">
                 {shinobi.map(e => <div key={e.id} className="shinobi-item">
                     {<img src={e.image} alt=""/>}
                     <div className="shinobi-name">{e.name}</div>
-                    <div>Village: {e.village}</div>
-                        <div>Abilities: {e.abilities}</div>
-                            <div>Power: {e.power}</div>
-
                                 <div>Price: {e.price}</div>
-                    <Link key={e.id} to={`shinobi/${e.id}`}>Rederect</Link>
-
+                    <Link key={e.id} to={`shinobi/${e.id}`}>Redirect</Link>
                 </div>)}
             </div>
+
         </div>
     )
 }

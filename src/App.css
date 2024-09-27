@@ -14,8 +14,18 @@
     border: purple solid;
     border-radius: 10px;
     margin-bottom: 50px;
-    background-color: plum;
+    background-color: gainsboro;
 
+}
+
+.shinobi-item:nth-child(2n) {
+    background-color: lightsteelblue;
+}
+
+
+.shinobi-item img {
+    height: 350px;
+    width: 500px;
 }
 
 .shinobi-name {
@@ -36,4 +46,6 @@
 
 button {
     text-decoration: none;
+
 }
+

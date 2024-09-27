@@ -1,0 +1,54 @@
+.shinobi-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shinobi-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: purple solid;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: lightsteelblue;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+.shinobi-card p {
+    margin: 5px;
+}
+
+.shinobi-card button {
+    text-decoration: none;
+    cursor: pointer;
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin-top: 20px;
+}
+
+.shinobi-card img {
+    width: 550px;
+    height: 350px;
+
+}
+
+.loading {
+    color: purple;
+    font-size: 55px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.title {
+    font-weight: bold;
+}

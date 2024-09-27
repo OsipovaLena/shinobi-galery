@@ -1,20 +1,27 @@
 body {
-    background: #fad5fa;
+    background: aliceblue;
 }
 
 
 button {
     text-decoration: none;
     border: none;
-    background-color: #fad5fa;
+    background-color: lightsteelblue;
     font-size: 20px;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: pink;
+    background-color: aliceblue;
 }
 
 a {
     text-decoration: none;
+    font-size: 20px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: dodgerblue;
 }
