@@ -39,6 +39,7 @@ export const Cards = () => {
                     <p> <span className="title">Abilities:</span> {shinobi.abilities}</p>
                     <p> <span className="title">Power:</span> {shinobi.power}</p>
                     <p> <span className="title">Price:</span> {shinobi.price}</p>
+                    <p> <span className="title">ID:</span> {shinobi.id}</p>
                     <button onClick={() => navigate(-1)}>Back</button>
                 </div>
 

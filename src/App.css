@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .shinobi-item {
@@ -47,5 +45,10 @@
 button {
     text-decoration: none;
 
+}
+
+.add-shinobi {
+    display: flex;
+    flex-direction: column;
 }
 
