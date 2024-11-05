@@ -2,11 +2,12 @@ import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import ReactPaginate from "react-paginate";
+import './App.css';
 
 
 export const AddShinobi = ({setZhopa}) => {
 
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, reset} = useForm()
     const onSubmit = (data) => postCard(data)
 
 
@@ -25,13 +26,14 @@ export const AddShinobi = ({setZhopa}) => {
             console.log(e)
             console.log(JSON.stringify(e))
             setZhopa(true)
+            reset()
         } catch (err) {
             console.log(err)
         }
     }
 
     return (
-        <div>
+        <div className="add-shinobi-container">
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
