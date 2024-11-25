@@ -11,8 +11,8 @@ export const AppRouter = () => {
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App />}/>
-            <Route path="/main" element={<App />}/>
-            <Route path="/shinobi/:id" element={<Cards />}/>
+            <Route path="/shinobi-galery" element={<App />}/>
+            <Route path="/shinobi-galery/shinobi/:id" element={<Cards />}/>
             <Route path="/add" element={<AddShinobi />}/>
         </Routes>
     </BrowserRouter>

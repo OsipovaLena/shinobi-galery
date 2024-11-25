@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 import './App.css';
 
 
-export const AddShinobi = ({setZhopa}) => {
+export const AddShinobi = ({setZhopa, shinobiList, setShinobiList}) => {
 
     const {register, handleSubmit, reset} = useForm()
     const onSubmit = (data) => postCard(data)
@@ -14,6 +14,10 @@ export const AddShinobi = ({setZhopa}) => {
 
     const postCard = async (e) => {
         const url = 'https://66f027aef2a8bce81be52678.mockapi.io/api/v1/shinobi'
+
+        if (!e.image || e.image.trim() === "") {
+            e.image = "https://st.peopletalk.ru/wp-content/uploads/2020/01/enoxukbwwaaewtc.jpg-large-640x455.jpg";
+        }
 
         try {
             await fetch(url, {
@@ -25,7 +29,7 @@ export const AddShinobi = ({setZhopa}) => {
             })
             console.log(e)
             console.log(JSON.stringify(e))
-            setZhopa(true)
+            setZhopa(prev => prev + 1)
             reset()
         } catch (err) {
             console.log(err)
@@ -42,6 +46,7 @@ export const AddShinobi = ({setZhopa}) => {
                 Abilities: <input {...register("abilities")} />
                 Power: <input {...register("power")} />
                 Price: <input {...register("price")} />
+                Img: <input {...register("image")} />
                 <input type="submit"/>
 
 

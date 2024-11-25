@@ -9,7 +9,7 @@ function App() {
     const [shinobi, setShinobi] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
-    const [zhopa, setZhopa] = useState(false);
+    const [zhopa, setZhopa] = useState(1);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
 
@@ -86,19 +86,21 @@ function App() {
             <div className="add-shinobi">
                 <button onClick={toggleDropdown}>Добавить шиноби</button>
                 {isDropdownOpen && (<div className="dropdown">
-                    <AddShinobi setZhopa={setZhopa} />
+                    <AddShinobi setZhopa={setZhopa}
+                    zhopa={zhopa}/>
                 </div>)}
 
-                <select onChange={handleSortShinobi}>
-                    <option value="">Сортировать по</option>
+                <div className="sort">
+                    <select onChange={handleSortShinobi} defaultValue="">
+                    <option value="" disabled hidden>Сортировать по</option>
                     <option value="price">возрастанию цены</option>
                     <option value="priceLow">убыванию цены</option>
                     <option value="power">возрастанию силы</option>
                     <option value="powerLow">уменьшению силы</option>
-                    <option value="id">Сначала старые</option>
-                    <option value="idLow">Сначала новые</option>
-
+                    <option value="id">сначала старые</option>
+                    <option value="idLow">сначала новые</option>
                 </select>
+                </div>
             </div>
 
 
