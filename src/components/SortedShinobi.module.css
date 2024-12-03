@@ -1,0 +1,14 @@
+.sort select {
+    background-color: lightsteelblue;
+    color: black;
+    border: solid navy;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.sort option[hidden] {
+    display: none;
+}
+

@@ -1,10 +1,10 @@
-.shinobi-about {
+.shinobiAbout {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.shinobi-card {
+.shinobiCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,11 +18,11 @@
 
 }
 
-.shinobi-card p {
+.shinobiCard p {
     margin: 5px;
 }
 
-.shinobi-card button {
+.shinobiCard button {
     text-decoration: none;
     cursor: pointer;
     color: darkblue;
@@ -33,7 +33,7 @@
     margin-top: 20px;
 }
 
-.shinobi-card img {
+.shinobiCard img {
     width: 550px;
     height: 350px;
 

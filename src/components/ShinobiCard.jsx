@@ -1,10 +1,8 @@
 import {useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import App from "./App.jsx";
-import './Cards.css'
-import app from "./App.jsx";
+import s from './ShinobiCard.module.css'
 
-export const Cards = () => {
+export const ShinobiCard = () => {
 
 
     const {id} = useParams();
@@ -30,9 +28,9 @@ export const Cards = () => {
 
     const ShinobiInfo = () => {
         return (
-            <div className='shinobi-about'>
+            <div className={s.shinobiAbout}>
 
-                <div className='shinobi-card'>
+                <div className={s.shinobiCard}>
                     <h1>{shinobi.name}</h1>
                     <div>{<img src={shinobi.image} alt=""/>}</div>
                     <p> <span className="title">Village:</span> {shinobi.village}</p>
@@ -48,7 +46,7 @@ export const Cards = () => {
     }
     const Loading = () => {
         return (
-            <div className="loading">Loading...</div>
+            <div className={s.loading}>Loading...</div>
         )
     }
     return (

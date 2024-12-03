@@ -1,0 +1,9 @@
+.headShinobi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rebeccapurple;
+    font-size: 50px;
+    background-color: lightsteelblue;
+
+}

@@ -1,0 +1,49 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shinobiContainer img {
+    width: 650px;
+}
+
+.shinobiItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: purple solid;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: gainsboro;
+
+}
+
+.shinobiItem:nth-child(2n) {
+    background-color: lightsteelblue;
+}
+
+
+.shinobiItem img {
+    height: 350px;
+    width: 500px;
+}
+
+.shinobiName {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+    .shinobiContainer img {
+        width: 350px;
+        height: 200px;
+    }
+
+    .headShinobi {
+        width: 100%;
+        font-size: 40px;
+    }
+
+}

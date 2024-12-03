@@ -1,18 +1,36 @@
-function fizzBuzz(x){
+// function findUniq(arr) {
+//
+//     let obj = {}
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] in obj){
+//             obj[arr[i]] = obj[arr[i]] + 1
+//         } else {
+//             obj[arr[i]] = 1
+//         }
+//     }
+//
+//     let min = Math.min(...Object.values(obj))
+//
+//     for (let key in obj){
+//         if (obj[key] === min) {
+//             return key
+//         }
+//     }
+//
+//     return min
+// }
+//
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))
 
-
-     if (x % 3 === 0){
-        return 'Fizz'
-    } if (x % 5 === 0){
-        return 'Buzz'
-    } if (x % 3 === 0 && x % 5 === 0){
-        return 'FizzBuss'
+const counter = (a, b) => {
+    let count = 0;
+    return () => {
+        count += a * b
+        return count
     }
-
-
-
-
-return x
 }
-console.log(fizzBuzz(15))
 
+const newCounter = counter(2, 4)
+
+console.log(newCounter())
+console.log(newCounter())

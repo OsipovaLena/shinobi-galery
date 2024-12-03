@@ -1,11 +1,8 @@
-import {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
 import {useForm} from "react-hook-form";
-import ReactPaginate from "react-paginate";
-import './App.css';
+import './App.module.css';
 
 
-export const AddShinobi = ({setZhopa, shinobiList, setShinobiList}) => {
+export const AddShinobi = ({setAddedShinobi, shinobiList, setShinobiList}) => {
 
     const {register, handleSubmit, reset} = useForm()
     const onSubmit = (data) => postCard(data)
@@ -29,7 +26,7 @@ export const AddShinobi = ({setZhopa, shinobiList, setShinobiList}) => {
             })
             console.log(e)
             console.log(JSON.stringify(e))
-            setZhopa(prev => prev + 1)
+            setAddedShinobi(prev => prev + 1)
             reset()
         } catch (err) {
             console.log(err)
@@ -51,18 +48,6 @@ export const AddShinobi = ({setZhopa, shinobiList, setShinobiList}) => {
 
 
             </form>
-
-            {/*<input*/}
-            {/*    type="text"*/}
-            {/*    value={change}*/}
-            {/*    onChange={handleChange} />*/}
-
-            {/*<p>Value: {change}</p>*/}
-
-            {/*<button onClick={handleAdd}>Add</button>*/}
-            {/*<div>{add}</div>*/}
-            {/*<button onClick={postCard}>New Shinobi</button>*/}
-
         </div>
     )
 }

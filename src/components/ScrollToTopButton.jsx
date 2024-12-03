@@ -1,5 +1,5 @@
 import React from "react";
-import './Scroll.css'
+import s from './ScrollToTopButton.module.css'
 
 export const ScrollToTopButton = () => {
     const scrollToTop = () => {
@@ -10,7 +10,7 @@ export const ScrollToTopButton = () => {
     }
 
     return (
-        <div className="scroll">
+        <div className={s.scroll}>
             <button onClick={scrollToTop}>Вверх</button>
         </div>
     )
