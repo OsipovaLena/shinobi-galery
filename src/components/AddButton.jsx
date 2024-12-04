@@ -1,11 +1,10 @@
 import {AddShinobi} from "../AddShinobi.jsx";
 
-
 export const AddButton = ({ isDropdownOpen, setIsDropdownOpen,addedShinobi, setAddedShinobi }) => {
 
     const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen)
-    }
+        setIsDropdownOpen(!isDropdownOpen);
+    };
     return (
         <div>
         <button onClick={toggleDropdown}>Добавить шиноби</button>
@@ -14,5 +13,5 @@ export const AddButton = ({ isDropdownOpen, setIsDropdownOpen,addedShinobi, setA
                     addedShinobi={addedShinobi}/>
     </div>)}
         </div>
-    )
-}
+    );
+};

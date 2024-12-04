@@ -1,16 +1,13 @@
 import {useForm} from "react-hook-form";
 import './App.module.css';
 
+export const AddShinobi = ({setAddedShinobi}) => {
 
-export const AddShinobi = ({setAddedShinobi, shinobiList, setShinobiList}) => {
-
-    const {register, handleSubmit, reset} = useForm()
-    const onSubmit = (data) => postCard(data)
-
-
+    const {register, handleSubmit, reset} = useForm();
+    const onSubmit = (data) => postCard(data);
 
     const postCard = async (e) => {
-        const url = 'https://66f027aef2a8bce81be52678.mockapi.io/api/v1/shinobi'
+        const url = 'https://66f027aef2a8bce81be52678.mockapi.io/api/v1/shinobi';
 
         if (!e.image || e.image.trim() === "") {
             e.image = "https://st.peopletalk.ru/wp-content/uploads/2020/01/enoxukbwwaaewtc.jpg-large-640x455.jpg";
@@ -19,19 +16,17 @@ export const AddShinobi = ({setAddedShinobi, shinobiList, setShinobiList}) => {
         try {
             await fetch(url, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(e)
-            })
-            console.log(e)
-            console.log(JSON.stringify(e))
-            setAddedShinobi(prev => prev + 1)
-            reset()
+            });
+            console.log(e);
+            console.log(JSON.stringify(e));
+            setAddedShinobi(prev => prev + 1);
+            reset();
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
-    }
+    };
 
     return (
         <div className="add-shinobi-container">
@@ -46,8 +41,7 @@ export const AddShinobi = ({setAddedShinobi, shinobiList, setShinobiList}) => {
                 Img: <input {...register("image")} />
                 <input type="submit"/>
 
-
             </form>
         </div>
-    )
-}
+    );
+};

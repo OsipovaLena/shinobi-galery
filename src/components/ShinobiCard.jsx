@@ -1,30 +1,25 @@
 import {useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import s from './ShinobiCard.module.css'
+import s from './ShinobiCard.module.css';
 
 export const ShinobiCard = () => {
 
-
     const {id} = useParams();
-    const [shinobi, setShinobi] = useState({})
-    const [loading, setLoading] = useState(true)
+    const [shinobi, setShinobi] = useState({});
+    const [loading, setLoading] = useState(true);
 
-    let navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`https://66f027aef2a8bce81be52678.mockapi.io/api/v1/shinobi/${id}`)
             .then(res => res.json())
             .then((data) => {
-                setShinobi(data)
-                setLoading(false)
-                console.log(data)
-            })
+                setShinobi(data);
+                setLoading(false);
+                console.log(data);
+            });
 
-    }, [])
-
-    const showShinobi = () => {
-        console.log(shinobi)
-    }
+    }, []);
 
     const ShinobiInfo = () => {
         return (
@@ -42,17 +37,19 @@ export const ShinobiCard = () => {
                 </div>
 
             </div>
-        )
-    }
+        );
+    };
     const Loading = () => {
         return (
             <div className={s.loading}>Loading...</div>
-        )
-    }
+        );
+    };
     return (
         <div>
-            {loading ? <Loading/> : <ShinobiInfo/>}
+            {loading
+? <Loading/>
+: <ShinobiInfo/>}
 
         </div>
-    )
-}
+    );
+};

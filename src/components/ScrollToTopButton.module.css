@@ -7,12 +7,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .scroll button {
-        position: absolute;
-        bottom: -65%;
+        display: block;
     }
 
 }

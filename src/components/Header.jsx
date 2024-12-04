@@ -1,9 +1,9 @@
-import s from './Header.module.css'
+import s from './Header.module.css';
 
 export const Header = () => {
     return(
         <div className={s.headShinobi}>
-            <p>Магазин шиноби</p>
+            <p>МАГАЗИН ШИНОБИ</p>
         </div>
-    )
-}
+    );
+};

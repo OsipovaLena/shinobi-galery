@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     color: rebeccapurple;
+    font-weight: 800;
     font-size: 50px;
-    background-color: lightsteelblue;
+    background-color: rgba(20,7,28,0.91);
+    width: 100%;
 
 }

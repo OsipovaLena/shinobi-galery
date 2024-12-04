@@ -1,8 +1,8 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   { ignores: ['dist'] },
@@ -33,6 +33,23 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'semi': 1,
+      'prefer-const': 1,
+      'semi-spacing': 1,
+      'multiline-ternary': ['error', 'always'],
+      'object-property-newline': 'error',
+      'object-curly-newline': ['error', { multiline: true }],
+      'no-whitespace-before-property': 'error',
+      'spaced-comment': ['error', 'always'],
+      'react/prop-types': 'off',
+      'react-hooks/exhaustive-deps': 'off',
+      "no-multiple-empty-lines": ["error", {
+ max: 1,
+maxEOF: 0,
+maxBOF: 0 
+}]
     },
   },
-]
+];

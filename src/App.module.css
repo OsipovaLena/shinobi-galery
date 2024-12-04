@@ -1,6 +1,9 @@
-button {
-    text-decoration: none;
-
+.container {
+    background: #feb47b;
+    background: radial-gradient(circle, #d3d3d3, #4f4f4f);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .addShinobi {

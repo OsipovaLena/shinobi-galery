@@ -1,12 +1,8 @@
-import {useState} from "react";
-import s from './Pages.module.css'
-
+import s from './Pages.module.css';
 
 export const Pages = ({ shinobi, currentPage, setCurrentPage, itemsPerPage }) => {
 
-
     const totalPages = Math.ceil(shinobi.length / itemsPerPage);
-
 
     const handleNextPage = () => {
         if (currentPage < totalPages) {
@@ -30,5 +26,5 @@ export const Pages = ({ shinobi, currentPage, setCurrentPage, itemsPerPage }) =>
                 Вперед
             </button>
         </div>
-    )
-}
+    );
+};

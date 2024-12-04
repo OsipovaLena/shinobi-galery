@@ -1,9 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import App from "./App.jsx";
 import {ShinobiCard} from "./components/ShinobiCard.jsx";
-import {AddShinobi} from "./AddShinobi.jsx"
-import {useParams} from "react-router-dom";
-
+import {AddShinobi} from "./AddShinobi.jsx";
 
 export const AppRouter = () => {
 
@@ -16,6 +14,5 @@ export const AppRouter = () => {
             <Route path="/add" element={<AddShinobi />}/>
         </Routes>
     </BrowserRouter>
-    )
-}
-
+    );
+};
