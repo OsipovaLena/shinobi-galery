@@ -1,4 +1,5 @@
 import {AddShinobi} from "../AddShinobi.jsx";
+import s from '../App.module.css'
 
 export const AddButton = ({ isDropdownOpen, setIsDropdownOpen,addedShinobi, setAddedShinobi }) => {
 
@@ -8,7 +9,7 @@ export const AddButton = ({ isDropdownOpen, setIsDropdownOpen,addedShinobi, setA
     return (
         <div>
         <button onClick={toggleDropdown}>Добавить шиноби</button>
-    {isDropdownOpen && (<div className="dropdown">
+    {isDropdownOpen && (<div className={s.dropdown}>
         <AddShinobi setAddedShinobi={setAddedShinobi}
                     addedShinobi={addedShinobi}/>
     </div>)}

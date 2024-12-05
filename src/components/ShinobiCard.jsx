@@ -2,6 +2,7 @@ import {useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import s from './ShinobiCard.module.css';
 
+
 export const ShinobiCard = () => {
 
     const {id} = useParams();
@@ -33,7 +34,7 @@ export const ShinobiCard = () => {
                     <p> <span className="title">Power:</span> {shinobi.power}</p>
                     <p> <span className="title">Price:</span> {shinobi.price}</p>
                     <p> <span className="title">ID:</span> {shinobi.id}</p>
-                    <button onClick={() => navigate(-1)}>Back</button>
+                    <button onClick={() => navigate(-1)}>Назад</button>
                 </div>
 
             </div>

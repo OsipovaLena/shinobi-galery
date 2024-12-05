@@ -28,11 +28,12 @@
     background-color: lightsteelblue;
 }
 
-addShinobi-container {
+.addShinobi-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    position: relative;
 }
 
 .dropdown {
@@ -46,10 +47,8 @@ addShinobi-container {
     border-radius: 5px;
     background-color: #f9f9f9;
     width: 170px;
-    left: 100%;
-    top: -10%;
+    left: 0;
     z-index: 10;
-
 }
 
 

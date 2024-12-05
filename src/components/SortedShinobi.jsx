@@ -1,4 +1,5 @@
 import s from './SortedShinobi.module.css';
+import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 
 export const SortedShinobi = ({ shinobi, setShinobi }) => {
 
@@ -39,6 +40,21 @@ export const SortedShinobi = ({ shinobi, setShinobi }) => {
                 <option value="id">сначала старые</option>
                 <option value="idLow">сначала новые</option>
             </select>
+
+            <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Сортировать по</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+
+                    label="Age"
+                    onChange={handleSortShinobi}
+                >
+                    <MenuItem value="price">возрастанию цены</MenuItem>
+                    <MenuItem value="priceLow">убыванию цены</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
         </div>
     );
 };

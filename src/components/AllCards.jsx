@@ -34,8 +34,8 @@ export const AllCards = ({ shinobi, setShinobi, addedShinobi, currentPage, items
                             <div className={s.shinobiName}>{e.name}</div>
                             <div>Price: {e.price}</div>
                             <div>Date: {e.createdAt}</div>
-                            <Link to={`shinobi/${e.id}`}>Redirect</Link>
-                            <button onClick={() => deleteShinobi(e.id)}>Delete</button>
+                            <Link to={`shinobi/${e.id}`}>Подробнее</Link>
+                            <button onClick={() => deleteShinobi(e.id)}>Удалить</button>
                         </div>
                     ))
                 )
